@@ -122,7 +122,7 @@ include_directories(${MINIZIP_INCLUDE_DIR})
 super_find_package(UriParser)
 include_directories(${URIPARSER_INCLUDE_DIR})
 
-include_directories(${CMAKE_SOURCE_DIR}/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 add_dependencies_if_needed(KMLBASE ZLIB)
 add_dependencies_if_needed(KMLBASE MiniZip)
@@ -147,7 +147,7 @@ else()
 endif()
 
 if(NOT WIN32 OR MINGW)
-  configure_file("${CMAKE_SOURCE_DIR}/cmake/libkml.pc.in"
+  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/libkml.pc.in"
     "${CMAKE_BINARY_DIR}/libkml.pc" @ONLY)
   install(FILES ${CMAKE_BINARY_DIR}/libkml.pc
     DESTINATION ${PKGCONFIG_INSTALL_DIR})
