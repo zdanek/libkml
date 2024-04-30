@@ -30,6 +30,7 @@
 #include <sstream>
 #include "kml/base/expat_handler.h"
 
+
 namespace kmlbase {
 
 static void XMLCALL

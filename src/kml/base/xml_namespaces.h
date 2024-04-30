@@ -54,7 +54,10 @@ typedef enum {
   XMLNS_XAL,
   XMLNS_XML,
   XMLNS_XSD,
-  XMLNS_XSI
+  XMLNS_XSI,
+
+    // MM ext.dtd
+    XMLNS_EXT
 } XmlnsId;
 
 // This data structure associates the libkml-internal xmlns id with the

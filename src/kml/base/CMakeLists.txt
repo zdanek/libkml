@@ -43,6 +43,7 @@ set(INCS
   xmlns.h
   zip_file.h)
 
+message(STATUS "EXPAT_LIBRARY = ${EXPAT_LIBRARY}")
 
 build_target(
   NAME kmlbase

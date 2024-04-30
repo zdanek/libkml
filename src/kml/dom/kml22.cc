@@ -277,6 +277,12 @@ static XsdElement kKml22Elements[] = {
   { "gx:x", XSD_SIMPLE_TYPE },
   { "gx:y", XSD_SIMPLE_TYPE },
 
+  //MM extension
+  {"ext:symbolInfo", XSD_COMPLEX_TYPE},
+  {"ext:standard", XSD_COMPLEX_TYPE},
+  {"ext:code", XSD_COMPLEX_TYPE},
+  {"ext:coordinates", XSD_COMPLEX_TYPE},
+
   { "</Unknown>", XSD_UNKNOWN }  // Mark the end appropriately.
 };
 

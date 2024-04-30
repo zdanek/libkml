@@ -28,8 +28,9 @@
 
 #include "kml/dom/visitor.h"
 
-#include "kml/dom/kmldom.h"
 #include "kml/dom/kml_cast.h"
+#include "kml/dom/kmldom.h"
+#include <iostream>
 
 namespace kmldom {
 
@@ -38,6 +39,8 @@ Visitor::Visitor() { }
 Visitor::~Visitor() { }
 
 void Visitor::VisitElement(const ElementPtr& element) {
+    // print element name or type
+    // std::cout << "Visiting " << kmlDomTypeToString(element->Type()) << std::endl;
   /* Top of element class hierarchy: Do nothing. */
 }
 
@@ -383,6 +386,11 @@ void Visitor::VisitPhotoOverlay(
 
 void Visitor::VisitPlacemark(
     const PlacemarkPtr& element) {
+  VisitFeature(element);
+}
+
+void Visitor::VisitExtSymbolInfo(
+    const kmldom::ExtSymbolInfoPtr &element) {
   VisitFeature(element);
 }
 

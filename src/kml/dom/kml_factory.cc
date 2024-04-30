@@ -137,6 +137,11 @@ ElementPtr KmlFactory::CreateElementById(KmlDomType id) const {
   case Type_GxTrack: return CreateGxTrack();
   case Type_GxWait: return CreateGxWait();
 
+  case Type_ExtSymbolInfo: return CreateExtSymbolInfo();
+  case Type_ExtStandard: return CreateExtStandard();
+  case Type_ExtCode: return CreateExtCode();
+  case Type_ExtCoordinates: return CreateExtCoordinates();
+
   default: return NULL;
   }
 }
@@ -514,8 +519,29 @@ GxTrack* KmlFactory::CreateGxTrack() const {
   return new GxTrack();
 }
 
-GxWait* KmlFactory::CreateGxWait() const {
-  return new GxWait();
+GxWait *KmlFactory::CreateGxWait() const
+{
+    return new GxWait();
+}
+
+ExtSymbolInfo *KmlFactory::CreateExtSymbolInfo() const
+{
+    return new ExtSymbolInfo();
+}
+
+ExtStandard *KmlFactory::CreateExtStandard() const
+{
+    return new ExtStandard();
+}
+
+ExtCode *KmlFactory::CreateExtCode() const
+{
+    return new ExtCode();
+}
+
+ExtCoordinates *KmlFactory::CreateExtCoordinates() const
+{
+    return new ExtCoordinates();
 }
 
 }  // namespace kmldom
