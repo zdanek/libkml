@@ -270,6 +270,11 @@ typedef enum {
   Type_GxX,
   Type_GxY,
 
+  Type_ExtSymbolInfo,
+  Type_ExtStandard,
+  Type_ExtCode,
+    Type_ExtCoordinates,
+
   Type_Invalid
 } KmlDomType;
 
@@ -482,19 +487,36 @@ typedef enum {
      "Type_GxAnimatedUpdate",
      "Type_GxFlyTo",
      "Type_GxLatLonQuad",
+     "Type_GxMultiTrack",
      "Type_GxPlaylist",
+     "Type_GxSimpleArrayData",
+     "Type_GxSimpleArrayField",
      "Type_GxSoundCue",
      "Type_GxTimeSpan",
      "Type_GxTimeStamp",
      "Type_GxTour",
      "Type_GxTourControl",
+     "Type_GxTrack",
      "Type_GxWait",
 
      "Type_GxAltitudeMode",
+     "Type_GxAngles",
      "Type_GxBalloonVisibility",
+     "Type_GxCoord",
      "Type_GxDuration",
      "Type_GxFlyToMode",
+     "Type_GxH",
+     "Type_GxInterpolate",
      "Type_GxPlayMode",
+     "Type_GxValue",
+     "Type_GxW",
+     "Type_GxX",
+     "Type_GxY",
+
+     "Type_ExtSymbolInfo",
+     "Type_ExtStandard",
+     "Type_ExtCode",
+     "Type_ExtCoordinates",
 
      "Type_Invalid"
    };

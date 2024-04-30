@@ -70,6 +70,7 @@ endfunction()
 
 macro(add_dependencies_if_needed prefix tgt)  
   if(TARGET ${tgt})
+    message(STATUS "[SuperFind] Adding dependency ${tgt} to ${prefix}")
     list(APPEND ${prefix}_DEPENDS ${tgt})
   endif()
 endmacro()

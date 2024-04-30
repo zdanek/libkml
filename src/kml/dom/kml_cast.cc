@@ -498,11 +498,28 @@ const UpdatePtr AsUpdate(const ElementPtr element) {
   return NULL;
 }
 
-const ViewVolumePtr AsViewVolume(const ElementPtr element) {
-  if (element && element->Type() == Type_ViewVolume) {
-    return boost::static_pointer_cast<ViewVolume>(element);
-  }
-  return NULL;
+const ViewVolumePtr AsViewVolume(const ElementPtr element)
+{
+    if (element && element->Type() == Type_ViewVolume) {
+        return boost::static_pointer_cast<ViewVolume>(element);
+    }
+    return NULL;
+}
+
+const ExtSymbolInfoPtr AsExtSymbolInfo(const ElementPtr &element)
+{
+    if (element && element->Type() == Type_ExtSymbolInfo) {
+        return boost::static_pointer_cast<ExtSymbolInfo>(element);
+    }
+    return NULL;
+}
+
+const ExtCoordinatesPtr AsExtCoordinates(const ElementPtr &element)
+{
+    if (element && element->Type() == Type_ExtCoordinates) {
+        return boost::static_pointer_cast<ExtCoordinates>(element);
+    }
+    return NULL;
 }
 
 }  // end namespace kmldom

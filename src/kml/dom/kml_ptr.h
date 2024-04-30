@@ -146,6 +146,10 @@ class GxTourPrimitive;
 class GxTrack;
 class GxWait;
 
+class ExtStandard;
+class ExtSymbolInfo;
+class ExtCoordinates;
+
 typedef boost::intrusive_ptr<Element> ElementPtr;
 typedef boost::intrusive_ptr<Field> FieldPtr;
 
@@ -207,7 +211,7 @@ typedef boost::intrusive_ptr<Orientation> OrientationPtr;
 typedef boost::intrusive_ptr<Pair> PairPtr;
 typedef boost::intrusive_ptr<PhotoOverlay> PhotoOverlayPtr;
 typedef boost::intrusive_ptr<Placemark> PlacemarkPtr;
-typedef boost::intrusive_ptr<Point> PointPtr;
+typedef boost::intrusive_ptr<Point>  PointPtr;
 typedef boost::intrusive_ptr<PolyStyle> PolyStylePtr;
 typedef boost::intrusive_ptr<Polygon> PolygonPtr;
 typedef boost::intrusive_ptr<Region> RegionPtr;
@@ -261,6 +265,10 @@ typedef boost::intrusive_ptr<GxTourControl> GxTourControlPtr;
 typedef boost::intrusive_ptr<GxTourPrimitive> GxTourPrimitivePtr;
 typedef boost::intrusive_ptr<GxTrack> GxTrackPtr;
 typedef boost::intrusive_ptr<GxWait> GxWaitPtr;
+
+typedef boost::intrusive_ptr<ExtStandard> ExtStandardPtr;
+typedef boost::intrusive_ptr<ExtSymbolInfo> ExtSymbolInfoPtr;
+typedef boost::intrusive_ptr<ExtCoordinates> ExtCoordinatesPtr;
 
 }  // end namespace kmldom
 

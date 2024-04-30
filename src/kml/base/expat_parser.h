@@ -34,7 +34,8 @@
 #define KML_BASE_EXPAT_PARSER_H__
 
 #include <map>
-#include "expat.h"
+#include "expat.h" // XML_Char
+
 #include "kml/base/util.h"
 
 namespace kmlbase {

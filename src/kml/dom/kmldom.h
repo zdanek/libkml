@@ -58,5 +58,6 @@
 #include "kml/dom/gx_tour.h"
 #include "kml/dom/xal.h"
 #include "kml/dom/visitor.h"
+#include "kml/dom/ext_symbols.h"
 
 #endif  // KML_DOM_KMLDOM_H__

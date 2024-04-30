@@ -47,7 +47,9 @@ const XmlNamespace XmlNamespaces[] = {
   { XMLNS_XAL, "xal", "urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" },
   { XMLNS_XML, "xml", "http://www.w3.org/XML/1998/namespace" },
   { XMLNS_XSD, "xsd", "http://www.w3.org/2001/XMLSchema" },
-  { XMLNS_XSI, "xsi", "http://www.w3.org/2001/XMLSchema-instance" }
+  { XMLNS_XSI, "xsi", "http://www.w3.org/2001/XMLSchema-instance" },
+    //MM
+    {XMLNS_EXT, "ext", "ext.dtd"}
 };
 
 bool FindXmlNamespaceAndPrefix(XmlnsId xmlns_id,

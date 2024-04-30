@@ -261,6 +261,9 @@ inline const GxWaitPtr AsGxWait(const ElementPtr element) {
   return ElementCast<GxWait>(element);
 }
 
+const ExtSymbolInfoPtr AsExtSymbolInfo(const ElementPtr& element);
+const ExtCoordinatesPtr AsExtCoordinates(const ElementPtr& element);
+
 }  // end namespace kmldom
 
 #endif  // KML_DOM_KML_CAST_H__

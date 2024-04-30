@@ -138,6 +138,11 @@ class KmlFactory {
   GxTrack* CreateGxTrack() const;
   GxWait* CreateGxWait() const;
 
+  ExtSymbolInfo* CreateExtSymbolInfo() const;
+  ExtStandard* CreateExtStandard() const;
+  ExtCode* CreateExtCode() const;
+  ExtCoordinates* CreateExtCoordinates() const;
+
  private:
   KmlFactory() {};  // Singleton class, use GetFactory().
   static KmlFactory* factory_;

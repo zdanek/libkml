@@ -284,6 +284,9 @@ class Visitor {
   virtual void VisitPlacemark(
       const PlacemarkPtr& element);
 
+  virtual void VisitExtSymbolInfo(
+      const ExtSymbolInfoPtr& element);
+
   virtual void VisitPoint(
       const PointPtr& element);
 
