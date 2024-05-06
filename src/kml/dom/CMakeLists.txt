@@ -12,6 +12,7 @@ set(INCS
   document.h
   element.h
   extendeddata.h
+  ext_symbols.h
   feature.h
   folder.h
   geometry.h

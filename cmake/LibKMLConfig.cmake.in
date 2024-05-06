@@ -24,10 +24,10 @@ foreach(targ @LIBKML_TARGETS@)
  
   get_target_property(LIB_LINK_FILENAME ${targ} IMPORTED_LINK_INTERFACE_LIBRARIES_@CONFIG_TYPE@)
   
-  string(REGEX MATCH "^kml" matched ${LIB_LINK_FILENAME})
-  if(NOT matched)
-    list(APPEND LIBKML_LIBRARIES ${LIB_LINK_FILENAME})
-  endif()
+#  string(REGEX MATCH "^kml" matched ${LIB_LINK_FILENAME})
+#  if(NOT matched)
+#    list(APPEND LIBKML_LIBRARIES ${LIB_LINK_FILENAME})
+#  endif()
   list(APPEND LIBKML_LIBRARIES ${LIB_LIB_FILENAME})
 endforeach()
 
