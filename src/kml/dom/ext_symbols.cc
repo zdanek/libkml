@@ -2,10 +2,10 @@
 #include "kml/dom/ext_symbols.h"
 
 #include "kml/base/xml_namespaces.h"
-#include <geometry.h>
+#include "kml/dom/geometry.h"
+#include "kml/dom/kml_cast.h"
 #include <iostream>
 #include <kml/base/vec3.h>
-#include <kml_cast.h>
 
 using kmlbase::Attributes;
 

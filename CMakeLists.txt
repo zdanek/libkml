@@ -6,10 +6,10 @@ set(VERSION_MINOR "3")
 set(VERSION_PATCH "1")
 set(VERSION_STRING "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 
-option(BUILD_TESTING  "Build testing." ON)
+option(BUILD_TESTING  "Build testing." OFF)
 option(BUILD_EXAMPLES  "Build examples." OFF)
 option(INSTALL_EXAMPLES   "Install examples sources and executables" OFF)
-option(BUILD_SHARED_LIBS  "Build shared libs." OFF)
+option(BUILD_SHARED_LIBS  "Build shared libs." ON)
 option(WITH_SWIG   "Build all swig bindings"   OFF)
 option(WITH_PYTHON "Build python bindings" OFF)
 option(WITH_JAVA   "Build java bindings"   OFF)
@@ -105,9 +105,9 @@ endif()
 
 include_directories(${Boost_INCLUDE_DIRS})
 
-#if(NOT BUILD_SHARED_LIBS)
-#endif()
+if(NOT BUILD_SHARED_LIBS)
     add_definitions(-DXML_STATIC) #for static expat
+endif()
 
 #expat is dependency for kmlbase and kmldom
 super_find_package(EXPAT)
@@ -129,7 +129,7 @@ add_dependencies_if_needed(KMLBASE MiniZip)
 add_dependencies_if_needed(KMLBASE UriParser)
 add_dependencies_if_needed(KMLBASE EXPAT)
 
-list(APPEND KMLBASE_DEPENDS EXPAT)
+#list(APPEND KMLBASE_DEPENDS EXPAT)
 
 add_subdirectory(src)
 
