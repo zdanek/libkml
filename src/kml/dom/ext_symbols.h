@@ -72,7 +72,8 @@ public:
     bool has_coordinates() const { return has_coordinates_; }
     const kmlbase::Vec3 get_coordinates() const { return coordinates_; }
     void set_coordinates(const ExtCoordinatesPtr& coordinates) {
-        if (has_coordinates_ = coordinates != NULL) {
+      has_coordinates_ = coordinates != NULL;
+        if (has_coordinates_) {
             coordinates_ = coordinates->coordinates();
         }
     }
